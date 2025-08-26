@@ -1,0 +1,409 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: transparent;
+    position: relative;
+    padding-top: 2.5rem; /* Same as .navbar height */
+}
+
+.title h1 {
+    font-size: 48px;
+    font-family: 'Lato', sans-serif;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    /* Gradient text */
+    color: #ffffff;
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2);
+
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4rem;
+    min-height: 0;
+    padding: 0;
+    margin-top: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(6px);
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    background: #baffc9;
+    color: #222;
+    box-shadow: 0 2px 8px rgba(186,255,201,0.3);
+    outline: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Header (Crumb Gif + Banner with Name) */
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.crumb_header_gif,
+.crumb_banner_name,
+.spaceship_gif {
+    max-width: 100%;
+    height: auto;
+    z-index: 20;
+}
+
+.crumb_header_gif {
+    width: 200px;
+    height: 200px;
+}
+
+.crumb_banner_name {
+    width: 400px;
+    height: 100px;
+}
+
+.spaceship_gif {
+    width: 200px;
+    height: 200px;
+    margin-left: 200px;
+}
+
+/* Middle section */
+.middle_section_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: baseline;
+    background-color: transparent;
+    gap: 50px;
+    z-index: 10;
+    flex-direction: row;
+    margin: 0 auto;
+}
+
+/* Intro card */
+.card.sharp-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0px;
+    width: 700px;
+    backdrop-filter: blur(12px);
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    padding: 20px;
+    margin-left: 100px;
+}
+
+.card.sharp-card h2 {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.4rem;
+}
+
+.card.sharp-card p {
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.4rem;
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.button {
+    flex: 1;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease, transform 0.2s ease;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.2rem;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.button-link {
+    background: white;
+    color: black;
+}
+
+.button-link:hover {
+    background: #00a773;
+    transform: scale(1.05);
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+/* Track card */
+.track-card {
+    border-radius: 12px;
+    padding: 5px;
+    margin: 10px auto;
+    margin-top: 40px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    max-width: 700px;
+    position: relative;
+    z-index: 20;
+}
+
+.track-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+    z-index: 20;
+}
+
+.track-links img {
+    width: 60px;
+    height: auto;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    cursor: pointer;
+    border-radius: 7px;
+    border: solid beige;
+    padding: 10px;
+}
+
+.track-card h2 {
+    color: white;
+    padding: 10px;
+}
+
+.ca {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    background-color: transparent;
+    padding: 20px;
+    z-index: 10;
+}
+
+.track-links img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 6px #fff);
+}
+
+/* Meme card */
+.meme-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 28px;
+    margin-top: 40px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.meme-card h2 {
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+}
+
+.meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.meme-grid img,
+.meme-grid video {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    background: #000;
+    cursor: pointer;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    display: block;
+    background: #000;
+    cursor: pointer;
+}
+
+/* --- Media Queries for Responsiveness --- */
+
+/* Card sections stack */
+@media (max-width: 900px) {
+  .card-section {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .card-section img.space-gif {
+    margin: 0 auto;
+    width: 140px;
+  }
+  .card.sharp-card {
+    max-width: 98vw;
+    height: auto;
+    padding: 16px;
+    margin: 0 auto;
+  }
+}
+
+/* Middle section vertical */
+@media (max-width: 768px) {
+  .middle_section_container {
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 20px;
+  }
+  .spaceship_gif,
+  .crumb_header_gif,
+  .crumb_banner_name {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+  .meme-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Font sizes & navbar adjust */
+@media (max-width: 600px) {
+  .title h1 {
+    font-size: 1.6rem;
+    margin-top: 3em;
+  }
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+  p {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+  .nav-links li a {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .content img,
+  .card-section img.space-gif {
+    width: 90px;
+  }
+  .track-card {
+    max-width: 98vw;
+    padding: 10px;
+  }
+  .track-links img {
+    width: 40px;
+  }
+  .ca {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+}
+
+/* Track links wrap */
+@media (max-width: 500px) {
+  .track-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Background animation */
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100%;
+    min-width: 100%;
+    display: block;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.stars {
+  background: #000 url(Images/stars.png) repeat top center;
+  z-index: 0;
+}
+
+.clouds {
+    background: transparent url(Images/clouds.png) repeat top center;
+    z-index: 2;
+    opacity: .4;
+    animation: move-clouds-back 200s linear infinite;
+}
+
+a:-webkit-any-link {
+    color: black;
+    cursor: pointer;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Crumbcat on Solana</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://terminal.jup.ag/main-v3.js" data-preload></script>
+
+    <!-- link rel="icon" href="favicon.ico" -->
+</head>
+<body>
+    <!-- <Background Classes (Animated)> -->
+    <div class="stars"></div>
+    <div class="twinkling"></div> 
+    <div class="clouds"></div>
+    
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="memes.html">Memes</a></li>
+        </ul>
+    </nav>
+      <!-- Crumb Gif + Crumb Banner  -->
+        <div class="box">
+        <img class="crumb_header_gif" src="Images/Crumb_Transparent.gif" alt="Crumbcat dancing GIF"> 
+            <img class="crumb_banner_name" src="Images/Crumb_Banner_Name.png" alt="Crumbcat Banner">
+            </div>
+
+    <!-- Flexbox Horizontally aligned -->
+    <div class="middle_section_container">
+    <img class="spaceship_gif" src="Images/Spaceship_NoBackground.gif" alt="Spaceship">
+    <div class="card sharp-card">           
+            <h2>Your Favorite Gif-Cat Crumb</h2> <br>
+            <p>
+               Crumbcat is a community-driven Cat/GIF memecoin on Solana, born on Jupiter Studio. Crumbcat became known, among other things, from the The Official Catdet Theme Song of Jupiter. 
+               His mission is simple: spread joy, dance, and community across the cosmos.
+               $CRUMB isn't just a token — it's a movement.
+            </p> <br> <br>
+            <h2>Join Us and Do the Crumb Dance!</h2> <br><br>
+
+             <!-- Jupiter Buy Button -> Sends directly to Jupiter Exchange-->
+            <a href="https://jup.ag/swap?sell=So11111111111111111111111111111111111111112&amp;buy=Hz7MeU72BNF9rCWyUFAwKTyCcjr6qsJm1jwYehnqjups" 
+               target="_blank" class="button button-link">Buy on Jupiter</a>
+        </div>
+
+     <!-- Styling for Jupiter Plugin here: -->    
+    <div id="integrated-terminal" style="width: 500px; margin-right: 100px;">
+        <!-- Jupiter Plugin: Do Not Touch -->
+        <script>
+            window.Jupiter.init({
+                displayMode: "integrated",
+                integratedTargetId: "integrated-terminal",
+                // 👇 REPLACE THIS WITH YOUR OWN HTTP PROVIDER ENDPOINT
+                endpoint: "https://mainnet.helius-rpc.com/?api-key=bae26b9a-3429-4442-b6c4-4afc6fc79a5e", 
+                formProps: {
+                    fixedOutputMint: false,
+                    initialInputMint: "So11111111111111111111111111111111111111112",   // Solana
+                    initialOutputMint: "Hz7MeU72BNF9rCWyUFAwKTyCcjr6qsJm1jwYehnqjups", // Crumb 
+                }
+            });
+        </script>
+        </div>
+      </div>
+ 
+    <!-- Links to Websites are here -->
+    <section id="track">
+        <div class="track-card">
+            <div class="track-links">
+                <a href="https://dexscreener.com/solana/CzaM56k3sveJjfTdCSMNaF7SUTwDTGMWKyavZoF3ZJdW" target="_blank">
+                    <img src="Icons/dexscrenner.png" alt="Dexscreener">
+                </a>
+                <a href="https://www.coingecko.com/en/coins/crumbcat" target="_blank">
+                    <img src="Icons/coingecko.png" alt="Coingecko">
+                </a>
+                <a href="https://jup.ag/tokens/Hz7MeU72BNF9rCWyUFAwKTyCcjr6qsJm1jwYehnqjups" target="_blank">
+                    <img src="Icons/Jupiter.png" alt="Jupiter">
+                </a>
+                <a href="https://x.com/Crumb_on_sol" target="_blank">
+                    <img src="Icons/x.png" alt="X Community">
+                </a>
+                <a href="https://www.tiktok.com/@crumbonsol" target="_blank">
+                    <img src="Icons/TikTok.svg" alt="TikTok">
+                </a>
+                <a href="https://drive.google.com/drive/folders/1hD6p_5xGeAgVmDwfazSH0ic-BeLnJFPx?usp=sharing" target="_blank">
+                    <img src="Icons/DriveIcon.png" alt="Google Drive Memes">
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- CA for $Crumb -->
+    <div class="ca" onclick="copyToClipboard(this)" data-clipboard-text="Hz7MeU72BNF9rCWyUFAwKTyCcjr6qsJm1jwYehnqjups">
+        Contact Address: Hz7MeU72BNF9rCWyUFAwKTyCcjr6qsJm1jwYehnqjups (click to copy)
+    </div>
+
+    <script>
+        //Click and copies CA's (Not my code+)
+        function copyToClipboard(element) {
+            const text = element.getAttribute('data-clipboard-text');
+            navigator.clipboard.writeText(text).then(() => {
+                const span = document.createElement('span');
+                span.textContent = 'Copied!';
+                span.style.position = 'absolute';
+                span.style.color = '#fff';
+                span.style.background = '#333';
+                span.style.padding = '2px 8px';
+                span.style.borderRadius = '4px';
+                span.style.fontSize = '12px';
+                span.style.top = '50%';
+                span.style.left = '50%';
+                span.style.transform = 'translate(-50%, -50%)';
+                element.appendChild(span);
+                setTimeout(() => span.remove(), 1000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+    </script>  
+</body>
+</html>

@@ -56,6 +56,44 @@ body {
   outline: none;
 }
 
+.slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* hides extra images */
+  background: transparent; /* optional, background color */
+  height: 100px; /* adjust to your image height */
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.slider {
+  display: flex;
+  width: max-content; /* lets flex size to content */
+  animation: ticker 150s linear infinite; /* speed & loop */
+  will-change: transform; /* force animation to start immediately */
+  animation-delay: -65s; /* skip first 40s of motion */
+}
+
+.slider img {
+  border-radius: 80%;
+}
+
+.ticker-item {
+  height: 100px;  /* keep consistent image size */
+  margin-right: 20px; /* space between images */
+}
+
+@keyframes ticker {
+  0% {
+    transform: translateX(100%); /* start off-screen right */
+  }
+  100% {
+    transform: translateX(-100%); /* move completely left */
+  }
+}
+
+
 /* --- Title --- */
 .title h1 {
   font-size: 2rem;
@@ -90,7 +128,7 @@ body {
   max-width: 100px;
   margin: 1rem;
   padding: 0;
-  margin: 0;
+  margin-top: 1rem;
   z-index: 10;
 }
 
@@ -108,7 +146,6 @@ body {
   align-items: center;
   gap: 0.5rem;
   margin: 0 auto;
-  padding: 0.5rem;
 }
 
 /* --- Cards --- */
@@ -162,7 +199,7 @@ body {
 .track-card {
   border-radius: 12px;
   padding: 10px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   text-align: center;
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
